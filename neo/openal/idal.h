@@ -17,7 +17,7 @@ extern ALvoid ( ALAPIENTRY * idalBufferData )( ALuint, ALenum, ALvoid *, ALsizei
 extern ALvoid ( ALAPIENTRY * idalDeleteBuffers )( ALsizei, ALuint * );
 extern ALboolean ( ALAPIENTRY * idalIsExtensionPresent )( ALubyte * );
 extern ALvoid ( ALAPIENTRY * idalDeleteSources )( ALsizei, ALuint * );
-extern ALenum ( ALAPIENTRY * idalGetEnumValue )( ALubyte * );
+extern ALenum ( ALAPIENTRY * idalGetEnumValue )( const ALubyte * );
 extern ALvoid * ( ALAPIENTRY * idalGetProcAddress )( ALubyte * );
 extern ALCcontext * ( ALAPIENTRY * idalcCreateContext )( ALCdevice *, ALCint * );
 extern ALCdevice * ( ALAPIENTRY * idalcOpenDevice )( ALubyte * );
@@ -48,7 +48,7 @@ extern ALvoid ( ALAPIENTRY * idalSourcePlay )( ALuint );
 #define alDeleteBuffers idalDeleteBuffers
 #define alIsExtensionPresent idalIsExtensionPresent
 #define alDeleteSources idalDeleteSources
-#define alGetEnumValue idalGetEnumValue
+#define alGetEnumValue(X) idalGetEnumValue((const ALubyte *)(X))
 #define alGetProcAddress idalGetProcAddress
 #define alcCreateContext idalcCreateContext
 #define alcOpenDevice idalcOpenDevice

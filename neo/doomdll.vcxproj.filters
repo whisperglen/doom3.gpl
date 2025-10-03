@@ -1823,6 +1823,12 @@
     <ClCompile Include="ui\Winvar.cpp">
       <Filter>Ui</Filter>
     </ClCompile>
+    <ClCompile Include="sys\win32\dxut\dxerr_a.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="sys\win32\dxut\dxerr_w.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="openal\idal.py">

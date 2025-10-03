@@ -17,7 +17,7 @@ ALvoid ( ALAPIENTRY * idalBufferData )( ALuint, ALenum, ALvoid *, ALsizei, ALsiz
 ALvoid ( ALAPIENTRY * idalDeleteBuffers )( ALsizei, ALuint * ) = NULL;
 ALboolean ( ALAPIENTRY * idalIsExtensionPresent )( ALubyte * ) = NULL;
 ALvoid ( ALAPIENTRY * idalDeleteSources )( ALsizei, ALuint * ) = NULL;
-ALenum ( ALAPIENTRY * idalGetEnumValue )( ALubyte * ) = NULL;
+ALenum ( ALAPIENTRY * idalGetEnumValue )( const ALubyte * ) = NULL;
 ALvoid * ( ALAPIENTRY * idalGetProcAddress )( ALubyte * ) = NULL;
 ALCcontext * ( ALAPIENTRY * idalcCreateContext )( ALCdevice *, ALCint * ) = NULL;
 ALCdevice * ( ALAPIENTRY * idalcOpenDevice )( ALubyte * ) = NULL;
@@ -94,7 +94,7 @@ idalDeleteSources = ( ALvoid ( ALAPIENTRY * ) ( ALsizei, ALuint * ) )GetProcAddr
 if ( !idalDeleteSources) {
   return "alDeleteSources";
 }
-idalGetEnumValue = ( ALenum ( ALAPIENTRY * ) ( ALubyte * ) )GetProcAddress( h, "alGetEnumValue" );
+idalGetEnumValue = ( ALenum ( ALAPIENTRY * ) ( const ALubyte * ) )GetProcAddress( h, "alGetEnumValue" );
 if ( !idalGetEnumValue) {
   return "alGetEnumValue";
 }

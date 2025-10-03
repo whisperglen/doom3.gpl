@@ -29,7 +29,7 @@ If you have questions concerning this license or the applicable additional terms
 #pragma hdrstop
 
 // DirectX SDK
-#include <DxErr.h>
+#include "dxut/dxerr.h"
 
 #include <ks.h>
 #include <ksmedia.h>
