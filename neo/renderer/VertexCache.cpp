@@ -247,6 +247,10 @@ void idVertexCache::Alloc( void *data, int size, vertCache_t **buffer, bool inde
 			if( !virtualMemory ) {
 				qglGenBuffersARB( 1, & block->vbo );
 			}
+			else
+			{
+				block->vbo = 0;
+			}
 		}
 	}
 
