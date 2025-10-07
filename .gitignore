@@ -6,6 +6,8 @@
 # Project-specific files
 ### ignore file changes with:  git update-index --skip-worktree <file>
 ### revert ignore with:        git update-index --no-skip-worktree  <file>
+build/
+neo/game/gamesys/GameTypeInfo.h
 
 # User-specific files
 *.rsuser

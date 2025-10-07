@@ -2547,4 +2547,9 @@
       <Filter>Tools\Script</Filter>
     </CustomBuildStep>
   </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="tools\package4github.bat">
+      <Filter>Tools</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
 </Project>
