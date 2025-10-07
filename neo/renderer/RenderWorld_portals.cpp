@@ -198,7 +198,8 @@ void idRenderWorldLocal::FloodViewThroughArea_r( const idVec3 origin, int areaNu
 
 		// if we are very close to the portal surface, don't bother clipping
 		// it, which tends to give epsilon problems that make the area vanish
-		if ( d < 1.0f ) {
+		float relax = r_portalCullRelax.GetFloat();
+	        if ( d < (1.0f + relax) ) {
 
 			// go through this portal
 			newStack = *ps;
@@ -364,7 +365,8 @@ void idRenderWorldLocal::FloodLightThroughArea_r( idRenderLightLocal *light, int
 
 		// if we are very close to the portal surface, don't bother clipping
 		// it, which tends to give epsilon problems that make the area vanish
-		if ( d < 1.0f ) {
+                float relax = r_portalCullRelax.GetFloat();
+		if ( d < (1.0f + relax) ) {
 			// go through this portal
 			newStack = *ps;
 			newStack.p = p;

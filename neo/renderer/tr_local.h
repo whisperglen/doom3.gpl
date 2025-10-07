@@ -813,6 +813,7 @@ extern glconfig_t			glConfig;		// outside of TR since it shouldn't be cleared du
 //
 // cvars
 //
+extern idCVar r_portalCullRelax;
 extern idCVar r_ext_vertex_array_range;
 
 extern idCVar r_glDriver;				// "opengl32", etc

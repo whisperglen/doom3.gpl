@@ -44,6 +44,7 @@ static void GfxInfo_f( void );
 
 const char *r_rendererArgs[] = { "best", "arb", "arb2", "Cg", "exp", "nv10", "nv20", "r200", NULL };
 
+idCVar r_portalCullRelax( "r_portalCullRelax", "0.0", CVAR_RENDERER | CVAR_FLOAT, "extra portal cull distance (0 = default, >0 relaxes portal visibility check)" );
 idCVar r_inhibitFragmentProgram( "r_inhibitFragmentProgram", "0", CVAR_RENDERER | CVAR_BOOL, "ignore the fragment program extension" );
 idCVar r_glDriver( "r_glDriver", "", CVAR_RENDERER, "\"opengl32\", etc." );
 idCVar r_useLightPortalFlow( "r_useLightPortalFlow", "1", CVAR_RENDERER | CVAR_BOOL, "use a more precise area reference determination" );
